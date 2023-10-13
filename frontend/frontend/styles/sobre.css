@@ -1,0 +1,13 @@
+.header-bottom-side-right img{
+    width: 85%;
+    border-radius: 50%;
+    height: 500px;
+}
+
+
+.header-bottom-side-left p {
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}

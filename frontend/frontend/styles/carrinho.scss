@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+    font-family: "arial", sans-serif;
+
+    > header {
+        background: #111;
+        color: white;
+        font-size: 24px;
+        padding: 20px;
+    
+        display: flex;
+        justify-content: space-between;
+
+        > .header-inner-content{
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        > .navbar{
+            background-color: #ffa600;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 10px 0px 10px #ffa600;
+            z-index: 99;
+            
+            > div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+            }
+        }
+        
+        .menu-link {
+            background-color: #333; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            padding: 10px 20px; /* Espaçamento interno (altere conforme necessário) */
+            text-decoration: none; /* Remove a decoração de link (sublinhado) */
+            border-radius: 5px; /* Borda arredondada */
+        }
+
+    }
+    
+    > main {
+        background: white;
+        padding: 0 30px 30px;
+    
+        .page-title {
+            font-size: 40px;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .content{
+            display: flex;
+    
+            section{
+                    flex: 1
+            }
+            aside{
+                min-width: 250px;
+            }
+        }
+    }
+}
+
+button{
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+}
+
+
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+    thead{
+        tr{
+            border-bottom: 3px solid #eee;
+            th{
+                text-align: left;
+                padding-bottom: 10px;
+                text-transform:uppercase;
+                color: #666;
+            }
+        }
+    }
+
+    tbody{
+        tr{
+            border-bottom: 3px solid #eee;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            td{
+                padding: 30px 0;
+            }
+        }
+    }
+}
+
+.product{
+    display: flex;
+    align-items: center;
+
+    img{
+        border-radius: 6px;
+    }
+
+    .info{
+        margin-left: 20px;
+        .title{
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .category{
+            color: #666;
+        }
+    }
+}
+
+.qty{
+    background: #eee;
+    display: inline-flex;
+    padding: 0 0;
+    justify-content: space-around;
+    min-width: 60px;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 30px;
+
+    span{
+        margin: 0 10px;
+    }
+    button{
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        padding: 0 15px;
+        font-size: 20px;
+        height: 100%;
+
+        &:hover{
+            background: #ddd;
+            
+        }
+    }
+}
+
+.remove{
+    background: #eee;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+    &:hover{
+        background: #ddd;
+        
+    }
+}
+
+aside{
+    margin-left: 30px;
+    .box{
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+
+        background: #eee;
+        color: #222;
+
+        header{
+            padding: 15px 20px;
+            font-size: 18px;
+            border-bottom: 1px solid #ccc;
+        }
+        .info{
+            padding: 20px;
+            font-size: 16px;
+
+            > div{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                color: #555;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+            button{
+                color: #006400;
+                background: transparent;
+                border: 0;
+                display:flex;
+                margin-bottom: 10px;
+                font-size: 16px;
+
+                i{
+                    font-size: 16px;
+                }
+            }
+        }
+        footer{
+            padding: 15px 20px;
+            background: #ddd;
+            font-size: 18px;
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+    > button{
+        border: 0;
+        padding: 15px 0;
+        color: white;
+        background: #006400;
+        display: block;
+        width: 100%;
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        font-size: 20px;
+
+        &:hover{
+            background: #50bb50;
+        }
+    }
+}

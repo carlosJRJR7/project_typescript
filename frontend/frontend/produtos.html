@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link rel="stylesheet" href="./styles/produto.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar show-menu">
+            <div class="header-inner-content">
+                <h1 class="logo">TAMA<span>NHON</span></h1>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html" class="menu-link">Inicio</a></li>
+                        <li><a href="./produtos.html" class="menu-link">Produtos</a></li>
+                        <li><a href="./sobre.html" class="menu-link">Sobre</a></li>
+                        <li><a href="./contato" class="menu-link">Contato</a></li>
+                        <li><a href="./cadastro.html" class="menu-link">Cadastros</a></li>
+                        <li><a href="./conta" class="menu-link">Conta</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icon-container">
+                    <img src="./images/cart.png"/>
+                    <img src="./images/menu.png" class="menu-buttom"/>
+                </div>
+            </div>
+        </div>
+    </header>
+    <ul id="produtos-list" class="produtos-container">
+        <!-- Os produtos serão adicionados aqui via JavaScript -->
+        <li class="produto">
+            <button class="adicionar-ao-carrinho"></button>
+        </li>
+        <!-- Repita a estrutura acima para cada produto -->
+    </ul>
+
+</body>
+
+<script src="./scripts/produtos.js"></script>
+</html>

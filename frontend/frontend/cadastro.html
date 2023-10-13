@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Produto</title>
+        <link rel="stylesheet" href="./styles/index.css"/>
+        <link rel="stylesheet" href="./styles/cadastro.css"/>
+    </head>
+<body>
+
+    <div class="navbar show-menu">
+        <div class="header-inner-content">
+            <h1 class="logo">TAMA<span>NHON</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="menu-link">Inicio</a></li>
+                    <li><a href="./produtos.html" class="menu-link">Produtos</a></li>
+                    <li><a href="./sobre.html" class="menu-link">Sobre</a></li>
+                    <li><a href="./cadastro.html" class="menu-link">Cadastros</a></li>
+                    <li><a href="./conta" class="menu-link">Conta</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="images/cart.png"/>
+                <img src="images/menu.png" class="menu-buttom"/>
+            </div>
+        </div>
+    </div>
+
+    <h1>Cadastro de Produto</h1>
+
+    <form id="cadastroProdutoForm" action="/api/cadastrarProduto" method="POST" enctype="multipart/form-data">
+        <!-- Campo para o nome do produto -->
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" id="nome" name="nomeProduto" required>
+        <br>
+    
+        <!-- Campo para o valor do produto -->
+        <label for="valor">Valor do Produto:</label>
+        <input type="number" id="valor" name="valorProduto" step="0.01" required>
+        <br>
+    
+        <!-- Campo para a quantidade do produto -->
+        <label for="quantidade">Quantidade do Produto:</label>
+        <input type="number" id="quantidade" name="quantidadeProduto" required>
+        <br>
+    
+        <!-- Campo para o tipo do produto -->
+        <label for="tipo">Tipo do Produto:</label>
+        <input type="text" id="tipo" name="tipoProduto" required>
+        <br>
+    
+        <!-- Campo para fazer upload da foto do produto -->
+        <label for="imagem">Foto do Produto (PNG apenas):</label>
+        <input type="file" id="imagem" name="imagemProduto" accept=".png">
+        <br>
+    
+        <!-- Botão de envio do formulário -->
+        <input type="submit" value="Cadastrar Produto" class="button">
+    </form>
+</body>
+
+<footer class="gray-background">
+    <div class="page-inner-content footer-content">
+        <div class="desenvolvedor">
+            <p> Site desenvolvido por</p>
+            <p> Carlos Roberto Nunes Junior</p>
+        </div>
+
+        <div class="logo-footer">
+            <h1 class="logo">TAMA<span>NHON</span></h1>
+            <p> Nosso objetivo é trazer mais comodidade e conforto para nossos funcionarios da grande vitoria</p>
+        </div>
+
+        <div class="redes-sociais">
+            <h3>Redes sociais</h3>
+            <p>Instagram</p>
+            <p>Facebook
+        </div>
+    </div>
+
+    <hr class="page-inner-content"/>
+    <div class="page-inner-content copyright">
+        <p>Copyright 2023 - Carlos Nunes - Todos direitos Reservados</p>
+    </div>
+</footer>
+<script src="./scripts/cadastro.js"></script>
+</html>
