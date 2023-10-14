@@ -208,6 +208,15 @@ main{
     gap: 1rem;
 }
 
+.cols-8 img {
+    max-width: 100%;
+}
+
+.cols-8{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
 .cols>*{
     cursor: pointer;
     transition: all 0.2s;

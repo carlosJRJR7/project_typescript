@@ -46,6 +46,26 @@ routes.get('/api/listarProdutos', async (req, res) => {
   }
 });
 
+routes.get('/api/listarProdutosSelecionados', async (req, res) => {
+  try {
+    const resultado = await produtoService.listarProdutosSelecionados(); // Filter by tipoProduto = 'S'
+    res.status(200).json(resultado);
+  } catch (error) {
+    console.error('Erro ao listar produtos selecionados:', error);
+    res.status(500).json({ erro: error.message || 'Ocorreu um erro ao listar os produtos selecionados' });
+  }
+});
+
+routes.get('/api/listarUltimosProdutos', async (req, res) => {
+  try {
+    const resultado = await produtoService.listarUltimosProdutos(); // Filter by tipoProduto = 'U'
+    res.status(200).json(resultado);
+  } catch (error) {
+    console.error('Erro ao listar produtos selecionados:', error);
+    res.status(500).json({ erro: error.message || 'Ocorreu um erro ao listar os produtos selecionados' });
+  }
+});
+
 routes.post('/api/adicionarAoCarrinho', async (req, res) => {
   try {
     const resultado = await carrinhoDeComprasService.adicionarProdutoAoCarrinho({
@@ -60,5 +80,7 @@ routes.post('/api/adicionarAoCarrinho', async (req, res) => {
     res.status(500).json({ erro: error.message || 'Ocorreu um erro ao adicionar o produto ao carrinho' });
   }
 });
+
+
 
 export default routes

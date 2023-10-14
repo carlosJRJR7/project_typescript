@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 20px;
+    margin: 30px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -14,12 +14,14 @@
     width: 24%; /* 25% para permitir 4 produtos por linha */
     vertical-align: top; /* Alinhamento superior para que todos comecem do topo */
     margin: 1%; /* Espaçamento entre os produtos */
+    margin-left: 100px;
   }
   
   /* Limpar após cada 4º produto para quebrar para a próxima linha */
   .produto:nth-child(4n) {
     clear: both;
   }
+  
   
   
 .produto img {
@@ -29,6 +31,7 @@
   width: 50%;
   height: 150px; /* Ajuste a altura conforme necessário */
 }
+
   
   .produto h1 {
     font-size: 24px;

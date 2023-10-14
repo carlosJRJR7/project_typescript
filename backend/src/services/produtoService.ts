@@ -21,6 +21,26 @@ class ProdutoService {
       throw new Error('Ocorreu um erro ao listar os produtos');
     }
   }
+
+  async listarProdutosSelecionados() {
+    try {
+      const produtos = await Produto.find({ tipoProduto: 'S' });
+      return produtos;
+    } catch (error) {
+      console.error('Erro ao listar produtos selecionados:', error);
+      throw new Error('Ocorreu um erro ao listar os produtos selecionados');
+    }
+  }
+
+  async listarUltimosProdutos() {
+    try {
+      const produtos = await Produto.find({ tipoProduto: 'U' });
+      return produtos;
+    } catch (error) {
+      console.error('Erro ao listar produtos selecionados:', error);
+      throw new Error('Ocorreu um erro ao listar os produtos selecionados');
+    }
+  }
   
 }
 
