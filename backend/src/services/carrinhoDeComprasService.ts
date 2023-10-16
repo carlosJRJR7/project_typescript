@@ -11,6 +11,16 @@ class CarrinhoDeComprasService{
             throw new Error('Ocorreu um erro ao cadastrar o produto');
         }
     }
+
+    async listarCarrinhoDeCompras(){
+        try{
+            const carrinho = await CarrinhoDeCompras.find();
+            return carrinho;
+        } catch (error) {
+            console.error('Erro ao listar produtos:', error);
+            throw new Error('Ocorreu um erro ao listar os produtos');
+        }
+    }
 }
 
 

@@ -81,6 +81,16 @@ routes.post('/api/adicionarAoCarrinho', async (req, res) => {
   }
 });
 
+routes.get('/api/listarCarrinhoDeCompras', async (req, res) => {
+  try {
+    const resultado = await carrinhoDeComprasService.listarCarrinhoDeCompras();
+    res.status(200).json(resultado);
+  } catch (error) {
+    console.error('Erro ao listar produtos do carrinho:', error);
+    res.status(500).json({ erro: error.message || 'Ocorreu um erro ao listar os produtos do carrinho' });
+  }
+});
+
 
 
 export default routes
