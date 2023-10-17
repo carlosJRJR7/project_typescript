@@ -8,22 +8,15 @@ const criarLinhaProduto = (item) => {
   const productCell = document.createElement('td');
   const productDiv = document.createElement('div');
   productDiv.classList.add('product');
-  const productImg = document.createElement('img');
-  productImg.src = item.imagemProduto;
-  productImg.alt = '';
   const productInfoDiv = document.createElement('div');
   productInfoDiv.classList.add('info');
   const productNameDiv = document.createElement('div');
   productNameDiv.classList.add('name');
   const productName = document.createElement('b');
   productName.textContent = item.nomeProduto;
-  const productCategory = document.createElement('div');
-  productCategory.classList.add('category');
-  productCategory.textContent = item.categoriaProduto;
 
   productNameDiv.appendChild(productName);
   productInfoDiv.appendChild(productNameDiv);
-  productInfoDiv.appendChild(productCategory);
   productDiv.appendChild(productImg);
   productDiv.appendChild(productInfoDiv);
   productCell.appendChild(productDiv);

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const adicionarAoCarrinhoButton = document.createElement('button');
           adicionarAoCarrinhoButton.textContent = 'Adicionar ao Carrinho';
           adicionarAoCarrinhoButton.classList.add('adicionar-ao-carrinho');
-          adicionarAoCarrinhoButton.addEventListener('click', () => comprarProduto(produto.quantidadeProduto, produto.valorProduto, produto.nomeProduto));
+          adicionarAoCarrinhoButton.addEventListener('click', () => comprarProduto(produto.quantidadeProduto, produto.valorProduto, produto.nomeProduto, produto.imagemProduto));
           produtoItem.appendChild(adicionarAoCarrinhoButton);
 
           produtosList.appendChild(produtoItem);
@@ -39,12 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 });
 
-function comprarProduto(quantidade, valor, nome) {
+function comprarProduto(quantidade, valor, nome, imagem) {
   if (quantidade > 0) {
     const produto = {
       quantidadeProduto: quantidade,
       valorProduto: valor,
       nomeProduto: nome,
+      imagemProduto: imagem,
     };
 
     fetch('http://localhost:3000/api/adicionarAoCarrinho', {

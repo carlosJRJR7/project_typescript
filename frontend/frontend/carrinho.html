@@ -5,68 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/carrinho.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <div class="navbar show-menu">
-            <div class="header-inner-content">
-                <h1 class="logo">TAMANHON</h1>
-                <nav>
-                    <ul>
-                        <li><a href="./index.html" class="menu-link">Inicio</a></li>
-                        <li><a href="./produtos.html" class="menu-link">Produtos</a></li>
-                        <li><a href="./sobre.html" class="menu-link">Sobre</a></li>
-                        <li><a href="./contato" class="menu-link">Contato</a></li>
-                        <li><a href="./cadastro.html" class="menu-link">Cadastros</a></li>
-                        <li><a href="./conta" class="menu-link">Conta</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-icon-container">
-                    <img src="images/cart.png"/>
-                    <img src="images/menu.png" class="menu-buttom"/>
-                </div>
+    <div class="navbar show-menu">
+        <div class="header-inner-content">
+            <h1 class="logo">TAMA<span>NHON</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="menu-link">Inicio</a></li>
+                    <li><a href="./produtos.html" class="menu-link">Produtos</a></li>
+                    <li><a href="./sobre.html" class="menu-link">Sobre</a></li>
+                    <li><a href="./cadastro.html" class="menu-link">Cadastros</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="./carrinho.html"><img src="images/cart.png"/></a>
+                <img src="images/menu.png" class="menu-buttom"/>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="page-title">
-            Seu carrinho
-        </div>
-        <div class="content">
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Preço</th>
-                            <th>Quantidade</th>
-                            <th>Total</th>
-                            <th>-</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-            </section>
-            <aside>
-                <div class="box">
-                    <header>Resumo da compra</header>
-                    <div class="info">
-                        <div><span>Sub-total</span><span class="subtotal"></span></div>
-                        <div><span>Frete</span><span>Gratuito</span></div>
-                        <div><button>Adicionar cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
-                    </div>
-                    <footer>
-                        <span>Total</span>
-                        <span class="total"></span>
-                    </footer>
-                </div>
-                <button>Finalizar Compra</button>
-            </aside>
-        </div>
-    </main>
+    </div>
 </body>
+
+<main>
+    <div class="page-title">
+        Seu carrinho
+    </div>
+    <div class="content">
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                        <th>-</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+        <aside>
+            <div class="box">
+                <header>Resumo da compra</header>
+                <div class="info">
+                    <div><span>Sub-total</span><span class="subtotal"></span></div>
+                    <div><span>Frete</span><span>Gratuito</span></div>
+                    <div><button>Adicionar cupom de desconto<i class='bx bx-right-arrow-alt'></i></button></div>
+                </div>
+                <footer>
+                    <span>Total: 418 Reais</span>
+                    <span class="total"></span>
+                </footer>
+            </div>
+            <button>Finalizar Compra</button>
+        </aside>
+    </div>
+</main>
 <script src="./scripts/carrinho.js"></script>
 </html>

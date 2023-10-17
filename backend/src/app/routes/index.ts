@@ -72,6 +72,7 @@ routes.post('/api/adicionarAoCarrinho', async (req, res) => {
       quantidadeProduto: req.body.quantidadeProduto,
       valorProduto: req.body.valorProduto,
       nomeProduto: req.body.nomeProduto,
+      imagemProduto: req.body.imagemProduto,
     });
 
     res.status(200).json(resultado);
